@@ -1,0 +1,488 @@
+[debug] [2023-02-23T04:25:01.530Z] ----------------------------------------------------------------------
+[debug] [2023-02-23T04:25:01.532Z] Command:       /home/ravi/.nvm/versions/node/v16.18.0/bin/node /home/ravi/.nvm/versions/node/v16.18.0/bin/firebase serve --only functions
+[debug] [2023-02-23T04:25:01.532Z] CLI Version:   11.16.0
+[debug] [2023-02-23T04:25:01.532Z] Platform:      linux
+[debug] [2023-02-23T04:25:01.533Z] Node Version:  v16.18.0
+[debug] [2023-02-23T04:25:01.533Z] Time:          Thu Feb 23 2023 09:55:01 GMT+0530 (India Standard Time)
+[debug] [2023-02-23T04:25:01.533Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-23T04:25:01.604Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-23T04:25:01.604Z] > authorizing via signed-in user (ravi.ss@imerit.net)
+[debug] [2023-02-23T04:25:01.604Z] [iam] checking project chakra2 for permissions ["firebase.projects.get"]
+[debug] [2023-02-23T04:25:01.606Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chakra2:testIamPermissions [none]
+[debug] [2023-02-23T04:25:01.606Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chakra2:testIamPermissions x-goog-quota-user=projects/chakra2
+[debug] [2023-02-23T04:25:01.606Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chakra2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-23T04:25:03.251Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chakra2:testIamPermissions 200
+[debug] [2023-02-23T04:25:03.251Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chakra2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-23T04:25:03.252Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chakra2 [none]
+[debug] [2023-02-23T04:25:03.864Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chakra2 200
+[debug] [2023-02-23T04:25:03.865Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chakra2 {"projectId":"chakra2","projectNumber":"816328411014","displayName":"chakra2","name":"projects/chakra2","resources":{"hostingSite":"chakra2","realtimeDatabaseInstance":"chakra2","storageBucket":"chakra2.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_f4955857-cbcc-4714-82df-af41c3ff40c9"}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2023-02-23T04:25:03.898Z] defaultcredentials: writing to file /home/ravi/.config/firebase/ravi_ss_imerit.net_application_default_credentials.json
+[debug] [2023-02-23T04:25:03.901Z] Setting GAC to /home/ravi/.config/firebase/ravi_ss_imerit.net_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/ravi/.config/firebase/ravi_ss_imerit.net_application_default_credentials.json"}}
+[debug] [2023-02-23T04:25:03.903Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chakra2/adminSdkConfig [none]
+[debug] [2023-02-23T04:25:04.577Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chakra2/adminSdkConfig 200
+[debug] [2023-02-23T04:25:04.577Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chakra2/adminSdkConfig {"projectId":"chakra2","databaseURL":"https://chakra2.firebaseio.com","storageBucket":"chakra2.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "/home/ravi/projects/iAssist/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/ravi/projects/iAssist/functions\" for Cloud Functions..."}}
+[debug] [2023-02-23T04:25:04.592Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-23T04:25:05.590Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-23T04:25:05.590Z] Building nodejs source
+[debug] [2023-02-23T04:25:05.590Z] Analyzing nodejs backend spec
+[debug] [2023-02-23T04:25:05.591Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-23T04:25:05.728Z] Serving at port 9005
+
+[debug] [2023-02-23T04:25:05.788Z] Got response from /__/functions.yaml {"endpoints":{"ask":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"ask"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-23T04:25:05.795Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: ask. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ask."}}
+[info] ✔  functions[us-central1-ask]: http function initialized (http://localhost:5000/chakra2/us-central1/ask). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/chakra2/us-central1/ask)."}}
+[debug] [2023-02-23T04:26:07.563Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2023-02-23T04:26:07.564Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2023-02-23T04:26:07.565Z] Accepted request GET /chakra2/us-central1/ask --> us-central1-ask
+[debug] [2023-02-23T04:26:07.569Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-02-23T04:26:07.569Z] [functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/"}}
+[debug] [2023-02-23T04:26:07.579Z] [worker-pool] addWorker(us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ask)"}}
+[debug] [2023-02-23T04:26:07.580Z] [worker-pool] Adding worker with key us-central1-ask, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ask, total=1"}}
+[debug] [2023-02-23T04:26:08.231Z] [runtime-status] [2870603] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:26:08.232Z] [runtime-status] [2870603] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:26:08.232Z] [runtime-status] [2870603] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-02-23T04:26:08.233Z] [runtime-status] [2870603] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:26:08.265Z] [runtime-status] [2870603] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-02-23T04:26:08.265Z] [runtime-status] [2870603] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:26:08.266Z] [runtime-status] [2870603] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:26:08.266Z] [runtime-status] [2870603] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:26:08.267Z] [runtime-status] [2870603] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:26:08.267Z] [runtime-status] [2870603] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:26:08.289Z] [runtime-status] [2870603] Functions runtime initialized. {"cwd":"/home/ravi/projects/iAssist/functions","node_version":"16.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Functions runtime initialized. {\"cwd\":\"/home/ravi/projects/iAssist/functions\",\"node_version\":\"16.18.0\"}"}}
+[debug] [2023-02-23T04:26:08.289Z] [runtime-status] [2870603] Listening to port: /tmp/fire_emu_3e36f2d23a88cf23.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2870603] Listening to port: /tmp/fire_emu_3e36f2d23a88cf23.sock"}}
+[debug] [2023-02-23T04:26:08.409Z] [worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: IDLE"}}
+[debug] [2023-02-23T04:26:08.410Z] [worker-pool] submitRequest(triggerId=us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ask)"}}
+[debug] [2023-02-23T04:26:08.411Z] [worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: BUSY"}}
+[info] i  functions: Beginning execution of "ask" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Beginning execution of \"ask\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[warn] ⚠  functions: Your function timed out after ~60s. To configure this timeout, see
+      https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Your function timed out after ~60s. To configure this timeout, see\n      https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation."}}
+[warn] ⚠  Your function was killed because it raised an unhandled error. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Your function was killed because it raised an unhandled error."}}
+[debug] [2023-02-23T04:27:08.467Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2023-02-23T04:27:08.473Z] [worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: exited"}}
+[debug] [2023-02-23T04:27:08.474Z] [worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-d7c7386d-897b-492f-a289-5536c993dc0e]: FINISHED"}}
+[debug] [2023-02-23T04:27:26.240Z] File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers"}}
+[debug] [2023-02-23T04:27:27.243Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-23T04:27:29.555Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-23T04:27:29.555Z] Building nodejs source
+[debug] [2023-02-23T04:27:29.556Z] Analyzing nodejs backend spec
+[debug] [2023-02-23T04:27:29.557Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-23T04:27:29.720Z] Serving at port 9005
+
+[debug] [2023-02-23T04:27:29.789Z] Got response from /__/functions.yaml {"endpoints":{"ask":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"ask"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-23T04:27:29.794Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: ask. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ask."}}
+[debug] [2023-02-23T04:27:29.895Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2023-02-23T04:27:29.895Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2023-02-23T04:27:29.895Z] Accepted request GET /chakra2/us-central1/ask --> us-central1-ask
+[debug] [2023-02-23T04:27:29.898Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-02-23T04:27:29.898Z] [functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/"}}
+[debug] [2023-02-23T04:27:29.898Z] [worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0"}}
+[debug] [2023-02-23T04:27:29.904Z] [worker-pool] addWorker(us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ask)"}}
+[debug] [2023-02-23T04:27:29.904Z] [worker-pool] Adding worker with key us-central1-ask, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ask, total=1"}}
+[debug] [2023-02-23T04:27:30.537Z] [runtime-status] [2871084] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:30.538Z] [runtime-status] [2871084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:30.538Z] [runtime-status] [2871084] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-02-23T04:27:30.539Z] [runtime-status] [2871084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:30.571Z] [runtime-status] [2871084] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-02-23T04:27:30.571Z] [runtime-status] [2871084] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:27:30.573Z] [runtime-status] [2871084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:30.573Z] [runtime-status] [2871084] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:30.573Z] [runtime-status] [2871084] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:30.574Z] [runtime-status] [2871084] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:27:30.595Z] [runtime-status] [2871084] Functions runtime initialized. {"cwd":"/home/ravi/projects/iAssist/functions","node_version":"16.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Functions runtime initialized. {\"cwd\":\"/home/ravi/projects/iAssist/functions\",\"node_version\":\"16.18.0\"}"}}
+[debug] [2023-02-23T04:27:30.595Z] [runtime-status] [2871084] Listening to port: /tmp/fire_emu_e807083b8481f7eb.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871084] Listening to port: /tmp/fire_emu_e807083b8481f7eb.sock"}}
+[debug] [2023-02-23T04:27:30.615Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: IDLE"}}
+[debug] [2023-02-23T04:27:30.615Z] [worker-pool] submitRequest(triggerId=us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ask)"}}
+[debug] [2023-02-23T04:27:30.615Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: BUSY"}}
+[info] i  functions: Beginning execution of "ask" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Beginning execution of \"ask\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2023-02-23T04:27:30.629Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: IDLE"}}
+[debug] [2023-02-23T04:27:30.629Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "ask" in 2.972494ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Finished \"ask\" in 2.972494ms"}}
+[debug] [2023-02-23T04:27:39.684Z] File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers"}}
+[debug] [2023-02-23T04:27:40.686Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-23T04:27:41.919Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-23T04:27:41.919Z] Building nodejs source
+[debug] [2023-02-23T04:27:41.919Z] Analyzing nodejs backend spec
+[debug] [2023-02-23T04:27:41.921Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-23T04:27:41.929Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2023-02-23T04:27:41.930Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2023-02-23T04:27:41.930Z] Accepted request GET /chakra2/us-central1/ask --> us-central1-ask
+[debug] [2023-02-23T04:27:41.933Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-02-23T04:27:41.933Z] [functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/"}}
+[debug] [2023-02-23T04:27:41.933Z] [worker-pool] submitRequest(triggerId=us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ask)"}}
+[debug] [2023-02-23T04:27:41.933Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: BUSY"}}
+[info] i  functions: Beginning execution of "ask" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Beginning execution of \"ask\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2023-02-23T04:27:41.939Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: IDLE"}}
+[debug] [2023-02-23T04:27:41.940Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "ask" in 0.800677ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Finished \"ask\" in 0.800677ms"}}
+[debug] [2023-02-23T04:27:42.069Z] Serving at port 9005
+
+[debug] [2023-02-23T04:27:42.128Z] Got response from /__/functions.yaml {"endpoints":{"ask":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"ask"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-23T04:27:42.132Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: ask. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ask."}}
+[debug] [2023-02-23T04:27:42.140Z] [worker-pool] Shutting down IDLE worker (us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-ask)"}}
+[debug] [2023-02-23T04:27:42.140Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: FINISHING"}}
+[debug] [2023-02-23T04:27:42.144Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: exited"}}
+[debug] [2023-02-23T04:27:42.144Z] [worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-df732ffc-4f99-44f4-9983-63e0fef111a2]: FINISHED"}}
+[debug] [2023-02-23T04:27:45.723Z] File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers"}}
+[debug] [2023-02-23T04:27:46.727Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-23T04:27:47.984Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-23T04:27:47.984Z] Building nodejs source
+[debug] [2023-02-23T04:27:47.984Z] Analyzing nodejs backend spec
+[debug] [2023-02-23T04:27:47.984Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-23T04:27:48.143Z] Serving at port 9005
+
+[debug] [2023-02-23T04:27:48.221Z] Got response from /__/functions.yaml {"endpoints":{"ask":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"ask"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-23T04:27:48.226Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: ask. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ask."}}
+[debug] [2023-02-23T04:27:48.440Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2023-02-23T04:27:48.440Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2023-02-23T04:27:48.440Z] Accepted request GET /chakra2/us-central1/ask --> us-central1-ask
+[debug] [2023-02-23T04:27:48.442Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-02-23T04:27:48.443Z] [functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/"}}
+[debug] [2023-02-23T04:27:48.443Z] [worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0"}}
+[debug] [2023-02-23T04:27:48.448Z] [worker-pool] addWorker(us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ask)"}}
+[debug] [2023-02-23T04:27:48.448Z] [worker-pool] Adding worker with key us-central1-ask, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ask, total=1"}}
+[debug] [2023-02-23T04:27:49.086Z] [runtime-status] [2871350] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:49.087Z] [runtime-status] [2871350] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:49.088Z] [runtime-status] [2871350] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-02-23T04:27:49.088Z] [runtime-status] [2871350] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:49.120Z] [runtime-status] [2871350] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-02-23T04:27:49.120Z] [runtime-status] [2871350] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:27:49.121Z] [runtime-status] [2871350] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:49.124Z] [runtime-status] [2871350] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:49.124Z] [runtime-status] [2871350] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:27:49.124Z] [runtime-status] [2871350] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:27:49.145Z] [runtime-status] [2871350] Functions runtime initialized. {"cwd":"/home/ravi/projects/iAssist/functions","node_version":"16.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Functions runtime initialized. {\"cwd\":\"/home/ravi/projects/iAssist/functions\",\"node_version\":\"16.18.0\"}"}}
+[debug] [2023-02-23T04:27:49.145Z] [runtime-status] [2871350] Listening to port: /tmp/fire_emu_6cd4bca59a9ef653.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871350] Listening to port: /tmp/fire_emu_6cd4bca59a9ef653.sock"}}
+[debug] [2023-02-23T04:27:49.158Z] [worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: IDLE"}}
+[debug] [2023-02-23T04:27:49.158Z] [worker-pool] submitRequest(triggerId=us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ask)"}}
+[debug] [2023-02-23T04:27:49.158Z] [worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: BUSY"}}
+[info] i  functions: Beginning execution of "ask" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Beginning execution of \"ask\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2023-02-23T04:27:49.169Z] [worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: IDLE"}}
+[debug] [2023-02-23T04:27:49.169Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "ask" in 1.161194ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Finished \"ask\" in 1.161194ms"}}
+[debug] [2023-02-23T04:28:15.671Z] File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers"}}
+[debug] [2023-02-23T04:28:16.674Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-23T04:28:17.829Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-23T04:28:17.829Z] Building nodejs source
+[debug] [2023-02-23T04:28:17.829Z] Analyzing nodejs backend spec
+[debug] [2023-02-23T04:28:17.829Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-23T04:28:17.965Z] Serving at port 9005
+
+[debug] [2023-02-23T04:28:18.040Z] Got response from /__/functions.yaml {"endpoints":{"ask":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"ask"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-23T04:28:18.046Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: ask. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ask."}}
+[debug] [2023-02-23T04:28:18.056Z] [worker-pool] Shutting down IDLE worker (us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-ask)"}}
+[debug] [2023-02-23T04:28:18.056Z] [worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: FINISHING"}}
+[debug] [2023-02-23T04:28:18.062Z] [worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: exited"}}
+[debug] [2023-02-23T04:28:18.062Z] [worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-407d8e9f-8341-4591-9a2c-7e2edd361f87]: FINISHED"}}
+[debug] [2023-02-23T04:28:18.077Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2023-02-23T04:28:18.078Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2023-02-23T04:28:18.078Z] Accepted request GET /chakra2/us-central1/ask --> us-central1-ask
+[debug] [2023-02-23T04:28:18.080Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-02-23T04:28:18.080Z] [functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/"}}
+[debug] [2023-02-23T04:28:18.080Z] [worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0"}}
+[debug] [2023-02-23T04:28:18.087Z] [worker-pool] addWorker(us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ask)"}}
+[debug] [2023-02-23T04:28:18.087Z] [worker-pool] Adding worker with key us-central1-ask, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ask, total=1"}}
+[debug] [2023-02-23T04:28:18.719Z] [runtime-status] [2871565] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:18.720Z] [runtime-status] [2871565] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:18.720Z] [runtime-status] [2871565] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-02-23T04:28:18.721Z] [runtime-status] [2871565] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:18.751Z] [runtime-status] [2871565] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-02-23T04:28:18.752Z] [runtime-status] [2871565] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:28:18.752Z] [runtime-status] [2871565] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:18.753Z] [runtime-status] [2871565] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:18.754Z] [runtime-status] [2871565] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:18.754Z] [runtime-status] [2871565] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:28:18.774Z] [runtime-status] [2871565] Functions runtime initialized. {"cwd":"/home/ravi/projects/iAssist/functions","node_version":"16.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Functions runtime initialized. {\"cwd\":\"/home/ravi/projects/iAssist/functions\",\"node_version\":\"16.18.0\"}"}}
+[debug] [2023-02-23T04:28:18.774Z] [runtime-status] [2871565] Listening to port: /tmp/fire_emu_9cb6bbc4681a8e3f.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871565] Listening to port: /tmp/fire_emu_9cb6bbc4681a8e3f.sock"}}
+[debug] [2023-02-23T04:28:18.798Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: IDLE"}}
+[debug] [2023-02-23T04:28:18.798Z] [worker-pool] submitRequest(triggerId=us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ask)"}}
+[debug] [2023-02-23T04:28:18.798Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: BUSY"}}
+[info] i  functions: Beginning execution of "ask" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Beginning execution of \"ask\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2023-02-23T04:28:18.810Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: IDLE"}}
+[debug] [2023-02-23T04:28:18.810Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "ask" in 2.16693ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Finished \"ask\" in 2.16693ms"}}
+[debug] [2023-02-23T04:28:25.196Z] File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers"}}
+[debug] [2023-02-23T04:28:26.198Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-23T04:28:27.370Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-23T04:28:27.370Z] Building nodejs source
+[debug] [2023-02-23T04:28:27.370Z] Analyzing nodejs backend spec
+[debug] [2023-02-23T04:28:27.370Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-23T04:28:27.377Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2023-02-23T04:28:27.378Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2023-02-23T04:28:27.378Z] Accepted request GET /chakra2/us-central1/ask --> us-central1-ask
+[debug] [2023-02-23T04:28:27.380Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-02-23T04:28:27.380Z] [functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/"}}
+[debug] [2023-02-23T04:28:27.380Z] [worker-pool] submitRequest(triggerId=us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ask)"}}
+[debug] [2023-02-23T04:28:27.381Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: BUSY"}}
+[info] i  functions: Beginning execution of "ask" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Beginning execution of \"ask\""}}
+[info] i  functions: Finished "ask" in 1.149791ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Finished \"ask\" in 1.149791ms"}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2023-02-23T04:28:27.387Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: IDLE"}}
+[debug] [2023-02-23T04:28:27.387Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2023-02-23T04:28:27.509Z] Serving at port 9005
+
+[debug] [2023-02-23T04:28:27.571Z] Got response from /__/functions.yaml {"endpoints":{"ask":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"ask"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-23T04:28:27.575Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: ask. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ask."}}
+[debug] [2023-02-23T04:28:27.583Z] [worker-pool] Shutting down IDLE worker (us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-ask)"}}
+[debug] [2023-02-23T04:28:27.583Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: FINISHING"}}
+[debug] [2023-02-23T04:28:27.587Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: exited"}}
+[debug] [2023-02-23T04:28:27.588Z] [worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-a95a93d4-18c0-4b28-9a61-1f3a92a11e60]: FINISHED"}}
+[debug] [2023-02-23T04:28:31.541Z] File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /home/ravi/projects/iAssist/functions/index.js changed, reloading triggers"}}
+[debug] [2023-02-23T04:28:32.545Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-02-23T04:28:33.678Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2023-02-23T04:28:33.679Z] Building nodejs source
+[debug] [2023-02-23T04:28:33.679Z] Analyzing nodejs backend spec
+[debug] [2023-02-23T04:28:33.679Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-02-23T04:28:33.692Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2023-02-23T04:28:33.693Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2023-02-23T04:28:33.693Z] Accepted request GET /chakra2/us-central1/ask --> us-central1-ask
+[debug] [2023-02-23T04:28:33.698Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-02-23T04:28:33.698Z] [functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/chakra2/us-central1/ask, mapping to path=/"}}
+[debug] [2023-02-23T04:28:33.698Z] [worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-ask: 1 --> 0"}}
+[debug] [2023-02-23T04:28:33.711Z] [worker-pool] addWorker(us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-ask)"}}
+[debug] [2023-02-23T04:28:33.711Z] [worker-pool] Adding worker with key us-central1-ask, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-ask, total=1"}}
+[debug] [2023-02-23T04:28:33.875Z] Serving at port 9005
+
+[debug] [2023-02-23T04:28:33.938Z] Got response from /__/functions.yaml {"endpoints":{"ask":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"ask"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-02-23T04:28:33.943Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: ask. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ask."}}
+[debug] [2023-02-23T04:28:34.399Z] [runtime-status] [2871652] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:34.401Z] [runtime-status] [2871652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:34.402Z] [runtime-status] [2871652] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-02-23T04:28:34.402Z] [runtime-status] [2871652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:34.434Z] [runtime-status] [2871652] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-02-23T04:28:34.435Z] [runtime-status] [2871652] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:28:34.435Z] [runtime-status] [2871652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:34.436Z] [runtime-status] [2871652] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:34.437Z] [runtime-status] [2871652] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2023-02-23T04:28:34.437Z] [runtime-status] [2871652] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/home/ravi/projects/iAssist/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-02-23T04:28:34.458Z] [runtime-status] [2871652] Functions runtime initialized. {"cwd":"/home/ravi/projects/iAssist/functions","node_version":"16.18.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Functions runtime initialized. {\"cwd\":\"/home/ravi/projects/iAssist/functions\",\"node_version\":\"16.18.0\"}"}}
+[debug] [2023-02-23T04:28:34.458Z] [runtime-status] [2871652] Listening to port: /tmp/fire_emu_b7596a832e2ae33b.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"[runtime-status] [2871652] Listening to port: /tmp/fire_emu_b7596a832e2ae33b.sock"}}
+[debug] [2023-02-23T04:28:34.524Z] [worker-us-central1-ask-ef00dd45-621c-4441-a14b-ed43d4e2a93e]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-ef00dd45-621c-4441-a14b-ed43d4e2a93e]: IDLE"}}
+[debug] [2023-02-23T04:28:34.524Z] [worker-pool] submitRequest(triggerId=us-central1-ask) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-ask)"}}
+[debug] [2023-02-23T04:28:34.524Z] [worker-us-central1-ask-ef00dd45-621c-4441-a14b-ed43d4e2a93e]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-ef00dd45-621c-4441-a14b-ed43d4e2a93e]: BUSY"}}
+[info] i  functions: Beginning execution of "ask" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Beginning execution of \"ask\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >   {"user":"","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m "}}
+[info] >  Q: What did the fish say when it hit the wall? {"user":"Q: What did the fish say when it hit the wall?","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m Q: What did the fish say when it hit the wall?"}}
+[info] >  A: Dam! {"user":"A: Dam!","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"\u001b[90m> \u001b[39m A: Dam!"}}
+[debug] [2023-02-23T04:28:36.865Z] [worker-us-central1-ask-ef00dd45-621c-4441-a14b-ed43d4e2a93e]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-ask-ef00dd45-621c-4441-a14b-ed43d4e2a93e]: IDLE"}}
+[debug] [2023-02-23T04:28:36.866Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "ask" in 2323.369139ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-ask"},"extension":{},"message":"Finished \"ask\" in 2323.369139ms"}}

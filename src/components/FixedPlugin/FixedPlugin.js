@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Black Dashboard React v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -34,7 +17,7 @@ function FixedPlugin(props) {
           <i className="fa fa-cog fa-2x" />
         </DropdownToggle>
         <ul className="dropdown-menu show">
-          <li className="header-title">SIDEBAR BACKGROUND</li>
+          {/* <li className="header-title">SIDEBAR BACKGROUND</li>
           <li className="adjustments-line">
             <div className="badge-colors text-center">
               <Badge
@@ -65,7 +48,8 @@ function FixedPlugin(props) {
                 }}
               />{" "}
             </div>
-          </li>
+          </li> */}
+          <li className="header-title">Assist theme mode</li>
           <li className="adjustments-line text-center color-change">
             <ThemeContext.Consumer>
               {({ changeTheme }) => (
@@ -84,7 +68,7 @@ function FixedPlugin(props) {
               )}
             </ThemeContext.Consumer>
           </li>
-          <li className="button-container">
+          {/* <li className="button-container">
             <Button
               href="https://www.creative-tim.com/product/black-dashboard-react"
               color="primary"
@@ -114,7 +98,7 @@ function FixedPlugin(props) {
             >
               Get pro version
             </Button>
-          </li>
+          </li> */}
         </ul>
       </Dropdown>
     </div>

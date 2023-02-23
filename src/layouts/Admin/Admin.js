@@ -1,20 +1,4 @@
-/*!
 
-=========================================================
-* Black Dashboard React v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 // javascript plugin used to create scrollbars on windows
@@ -28,7 +12,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
-import logo from "assets/img/react-logo.png";
+import logo from "assets/img/imerit_logo.png";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
@@ -94,12 +78,13 @@ function Admin(props) {
     });
   };
   const getBrandText = (path) => {
+    // return "iMPP";
     for (let i = 0; i < routes.length; i++) {
       if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
-        return routes[i].name;
+        return "iMPP " + routes[i].name;
       }
     }
-    return "Brand";
+    return "iMPP";
   };
   return (
     <BackgroundColorContext.Consumer>
@@ -109,8 +94,8 @@ function Admin(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: "https://www.creative-tim.com/",
-                text: "Creative Tim",
+                // outterLink: "https://www.imerit.net/",
+                text: "iMerit",
                 imgSrc: logo
               }}
               toggleSidebar={toggleSidebar}
@@ -123,7 +108,7 @@ function Admin(props) {
               />
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from="*" to="/admin/dashboard" />
+                <Redirect from="*" to="/admin/assist" />
               </Switch>
               {
                 // we don't want the Footer to be rendered on map page

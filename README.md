@@ -11,6 +11,9 @@
 4. Axios
 
 ## Dev Note
+
+### *** Use only yarn and not npm 
+
 POC to demonstrate chatGPT using openAI api
 
 To run local client

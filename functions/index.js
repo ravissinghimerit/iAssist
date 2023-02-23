@@ -3,15 +3,19 @@ const functions = require("firebase-functions");
 
 // import { Configuration, OpenAIApi } from "openai";
 const { Configuration, OpenAIApi } = require("openai");
+const cors = require('cors')({ origin: '*', "methods": "GET,HEAD,PUT,PATCH,POST,DELETE" });
 
 const config = new Configuration({
-    apiKey: "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"
+    apiKey: "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"//personal
+    // apiKey: "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"//iMerit ravi.ss
 });
 
 const openai = new OpenAIApi(config);
 
 
-const ask = (prompt) => {
+
+const ask = async (prompt) => {
+    // return prompt + ' from ask';
     return openai.createCompletion({
         model: "text-davinci-003",
         prompt: `${prompt}`,
@@ -21,10 +25,12 @@ const ask = (prompt) => {
     }).then(response => {
         console.log(response.data.choices[0].text);
         return response.data.choices[0].text
-    }).catch(err => {
-        console.log(err);
-        throw new Error(err);
     })
+}
+
+const hcheck = async (prompt) => {
+    console.log(prompt);
+    return prompt;
 }
 
 
@@ -32,17 +38,49 @@ const ask = (prompt) => {
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
-exports.ask = functions.https.onRequest(async (request, response) => {
-    functions.logger.info("Hello logs!", { structuredData: true });
-    const { prompt } = JSON.parse(request.body);
 
-    // return response.send(prompt)
-    let resultText;
-    try {
-        resultText = await ask(prompt)
-    } catch (error) {
-        console.log(error);
-        return response.status(500).send(error);
-    }
-    return response.send(resultText);
+exports.health = functions.https.onRequest(async (request, response) => {
+    cors(request, response, async () => {
+        functions.logger.info("health logs!", { structuredData: true });
+        functions.logger.info('request body', { body: request.body })
+
+
+        // return response.send(prompt)
+        let resultText;
+        try {
+            const { prompt } = request.body;
+            console.log('prompt : ' + prompt);
+            resultText = await hcheck(prompt)
+        } catch (error) {
+            console.log('catched at health : ', error);
+            return response.status(500).send({ err: error });
+        }
+
+        console.log('resultText: ' + resultText);
+        return response.status(200).send(resultText);
+    });
+
+})
+
+exports.ask = functions.https.onRequest((request, response) => {
+    cors(request, response, async () => {
+        functions.logger.info("ask logs!", { structuredData: true });
+        functions.logger.info('request body', { body: request.body })
+
+
+        // return response.send(prompt)
+        let resultText;
+        try {
+            const { prompt } = request.body;
+            console.log('prompt : ' + prompt);
+            resultText = await ask(prompt)
+        } catch (error) {
+            console.log('catched at ask : ', error);
+            return response.status(500).send({ err: error });
+        }
+        console.log('resultText: ' + resultText);
+        return response.status(200).send(resultText);
+        return response.send(resultText);
+    });
+
 });

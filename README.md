@@ -12,3 +12,20 @@
 
 ## Dev Note
 POC to demonstrate chatGPT using openAI api
+
+To run local client
+```bash
+npm start
+```
+To run local sever
+```bash
+npm run serve:functions
+```
+To deploy cloud functions to remote server
+```bash
+npm run deploy:functions
+```
+
+
+# Author
+Ravi S Singh
